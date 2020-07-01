@@ -1,0 +1,45 @@
+
+$dark-color:  #070608cb;
+
+html, body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;	
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-dream-trip-to-the-world-poster-image_230214.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+    
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul {
+    list-style-type: none;
+}

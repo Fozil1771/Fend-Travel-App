@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Travel App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="navbar">
+            <div class="navbar__logo">
+                Travel App
+            </div>
+            <div class="navbar__navig">
+                About
+            </div>
+    </header>
+    <div class="heading text-center">
+        <div class="container">
+            <h1 class="display-4">Travel The World</h1>
+            <p class="lead">This is a travel planner to help you organize you trips.</p>
+        </div>
+    </div>
+<main>
+
+    <section class="inputs container">
+            <label class="inputs__label" for="">Let's travel the world</label>
+            <input class="inputs__input" type="text" id="city" placeholder="enter city name here" required/>
+            <label class="inputs__label" for="">Enter departure data here</label>
+            <input class="inputs__input" type="date" id="dateTime" required />
+            <label class="inputs__label" for="">Enter arrival data here</label>
+            <input class="inputs__input" type="date" id="endTime" required />
+            <button class="btn btn-success btn-lg m-2 w-50" id="generate" type="submit">Trip</button>
+    </section>
+    <section class="output container">
+        <div class="text-center display-4 lead">My Trip</div>
+       
+        <div id="printable" class="visible lists">
+                <div id="dateLeft" class="item"></div>
+                <div id="dateInfo" class="item"></div>
+                <div id="destination" class="item"></div>
+                <div id="content" class="item"></div>
+                <div id="temperature" class="item"></div>
+                <div id="weatherPres" class="item"></div>
+                <div id="weatherInfo" class="item"></div>
+        </div>
+        <div id="image"></div>
+        <button type="button" class="btn btn-info visible text-center w-25 my-3" id="print">Print PDF</button>
+    </section>
+</main>
+<footer class="footer">
+        <p class="footer__text">Fozil Zayn</p>
+        <p class="footer__space"></p>
+        <p class="footer__text">&copy;2020</p>
+    </footer>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha256-DupmmuWppxPjtcG83ndhh/32A9xDMRFYkGOVzvpfSIk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha256-gJWdmuCRBovJMD9D/TVdo4TIK8u5Sti11764sZT1DhI=" crossorigin="anonymous"></script>
+    <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+</body>
+
+</html>

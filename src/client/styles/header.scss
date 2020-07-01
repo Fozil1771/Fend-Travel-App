@@ -1,0 +1,169 @@
+@import './resets.scss';
+
+.navbar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: $dark-color;
+    color: #fff;
+   
+    #{&}__logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    #{&}__navig {
+        @extend .navbar__logo;
+    }
+    #{&}__logo, #{&}__navig {
+        animation: .5s animHead 1s 1 ease-out forwards;
+    }
+
+}
+
+@keyframes animHead {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.heading {
+    background-color: rgba(#070608cb, .5);
+    color: rgba(223, 217, 217, 0.945);
+}
+
+// body{
+//     background: #2d3436;
+//     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+//     margin: 1rem;
+// }
+
+// #app{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     color: #C8F7C5;
+//     font-size: 20px;
+//     font-family: 'Oswald', sans-serif;
+// }
+
+// .holder{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .date-inputs {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .entry{
+//     width: 30rem;
+//     margin: 1.5rem;
+//     background: rgba(59, 74, 107, .4);
+// }
+
+// .output{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// #entryHolder{
+//     font-size: 1.7rem;
+//     padding: .5rem;
+// }
+
+
+// .headline {
+//     font-size: 2.3rem;
+//     border: 1px solid;
+//     padding: 1rem;
+
+// }
+// .title{
+//     align-self: center;  
+// }
+
+// /*  Basic Styling To Override Default For Basic HTML Elements */
+// label{
+//     display:block;
+//     /* font-size: 27px; */
+//     align-self: center;
+//     margin: 1rem;
+// }
+
+// input{
+//     display:block;
+//     height: 60px;
+//     width: 320px;
+//     background:#22b2da;
+//     color: #2d3436;
+//     font-family: 'Oswald', sans-serif;
+//     border: none;
+// }
+
+// button{
+//     width: 400px;
+//     height: 100px;
+//     align-self: center;
+//     margin: 2rem;
+//     background: #3b4a6b;
+//     color: #f0d43a;
+//     font-size: 26px;
+//     font-family: 'Oswald', sans-serif;
+//     border: none;
+//     box-shadow: 2px 4px 5px #444;
+//     cursor: pointer;
+// }
+
+
+// input, textarea ,label, .title {
+//     font-size: 1.8rem;
+// }
+
+
+// /* Reset style for HTML element on active to have no border*/
+// input:focus,
+// select:focus,
+// textarea:focus,
+// button:focus {
+//     outline: none;
+// }
+// /* Style for Placeholder Text*/
+// ::placeholder { /* Firefox, Chrome, Opera */ 
+//     color: #22313F; 
+//     font-family: 'Oswald', sans-serif;
+
+// } 
+  
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+//     color: #f0d43a; 
+//     font-family: 'Oswald', sans-serif;
+
+// } 
+  
+// ::-ms-input-placeholder { /* Microsoft Edge */ 
+//     color: #f0d43a; 
+//     font-family: 'Oswald', sans-serif;
+
+// } 
+
+
+// .image {
+//     display: block;
+
+//     &__img{
+//         width: 29rem;
+//         height: 300px;
+//     }
+// }
+
+// .visible{
+//     display: none;
+//     visibility: hidden;
+// }

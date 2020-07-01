@@ -1,0 +1,45 @@
+@import './resets.scss';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    padding: 1rem;
+    background-color: $dark-color;
+    color: #fff;
+    flex-shrink: 0;
+    
+    &__text{
+        margin: .2rem;
+        margin-right: .4rem;
+        font-size: 1.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        animation: .8s slideUp 0s 1 ease-out;
+    }
+    &__space {
+        
+        animation: .5s spaceAround 1s 1 ease-out forwards;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes spaceAround {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 4rem;
+    }
+}
